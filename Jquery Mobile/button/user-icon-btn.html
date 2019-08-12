@@ -1,0 +1,30 @@
+ <!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	<style>
+		.ui-icon-my-icon:after {
+			background:url(nook.jpg);
+			background-size: 18px 18px;
+		}
+	</style>
+</head>
+<body>
+	<div data-role="page">
+		<dir data-role="header">
+			<h1>Header</h1>
+		</dir>
+		<div data-role="content">
+			<button data-icon="my-icon">User Defined Icon Buttom</button>
+			<button><img src="nook.jpg" width="100"></button>
+		</div>
+		<div data-role="footer" data-position="fixed">
+			<h4>Footer</h4>
+		</div>
+	</div>
+</body>
+</html>

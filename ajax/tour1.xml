@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<attractionlist xmlns="http://www.hk.ac.kr/2014/xmlns/tour">
+	<attraction country="US">
+		<name>Liberty Island</name>
+		<location>New York</location>
+		<picture>nook.jpg</picture>
+	</attraction>
+</attractionlist>

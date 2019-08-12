@@ -1,0 +1,54 @@
+ <!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+	<div data-role="page" id="page1">
+		<dir data-role="header">
+			<h1>Header</h1>
+		</dir>
+		<div data-role="content">
+			<form method="get" action="form.jsp">
+				<h1>Sign Up</h1>
+				<fieldset>
+					<legend>Mandotary Information</legend>
+					<table>
+						<tr>
+							<td><label for="s_id">ID</label></td>
+							<td><input type="text" name="s_id" id="s_id" disabled data-role="none"></td>
+						</tr>
+						<tr>
+							<td><label for="s_name">Name</label></td>
+							<td><input name="s_name" id="s_name" disabled="disabled" data-role="none"></td>
+						</tr>
+					</table>
+				</fieldset><br>
+				<fieldset>
+					<legend>Additional Information</legend>
+					Phone: <input type="text" name="s_tel" placeholder="999-999-9999" data-role="none"><br>
+					Signup Date: <input type="date" name="s_date" value="2014-11-11" data-role="none"><br>
+					Gender: <select data-role="none">
+						<option value="male">Male</option>
+						<option value="female">Female</option>
+					</select><br>
+					Grade: <input type="radio" name="syear" value="1" data-role="none">First Grade
+					<input type="radio" name="syear" value="2" data-role="none">Second Grade
+					<input type="radio" name="syear" value="3" data-role="none">Third Grade
+					<input type="radio" name="syear" value="4" data-role="none">Fourth Grade<br>
+					Age: <input type="number" name="year" min="1" max="100" value="20" data-role="none">
+				</fieldset><br>
+				<input type="submit" value="Confirm" data-role="none">
+				<input type="reset" value="Cancel" data-role="none">
+			</form>
+		</div>
+		<div data-role="footer" data-position="fixed">
+			<h4>Footer</h4>
+		</div>
+	</div>
+</body>
+</html>

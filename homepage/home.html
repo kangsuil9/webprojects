@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width initial-scale=1">
+	<title>HTML5 My Portpolio Homepage</title>
+	<link rel="stylesheet" type="text/css" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+	
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<style>
+		@font-face {
+			font-family: bmjua;
+			src: url(BMJUA_otf.otf);
+		}
+		body {font-family: bmjua;}
+		header {background-color: #C9D787; color: white; padding: 30px; text-align: center; font-size: 30px}
+		nav {list-style-type: none; text-align: center; overflow: hidden;}
+		ul {padding: 0px; }
+		li {display: inline;}
+		a {text-decoration: none; padding-right: 10px; padding-left: 10px; color: #7D8A2E}
+		footer {padding: 10px; text-align: center; color: gray}
+		#outercontent {text-align-last: center; }
+		.innercontent {}
+
+	</style>
+	<script type="text/javascript">
+		var dir = "images";
+		var fileextension = ".png";
+
+		$(document).ready(function() {
+			$.ajax({
+				url: dir,
+				success: function (data) {
+					$(data).find("a:contains("+fileextension+")").each(function() {
+						var filename = this.herf.replace(window.location.host, "").replace("http://", "");
+
+						var outer = document.getElementById('outercontent');
+						var child = document.createElement("div");
+						child.className = "innercontent";
+						var img = document.createElement("img");
+						img.src = filename;
+						img.weight = 200;
+						img.height = 200;
+
+						child.appendChild(img);
+						outer.appendChild(child);
+					});
+				}
+			});
+		});
+	</script>
+</head>
+<body>
+	<header>
+		<h1>Lilly Portfolio</h1>
+	</header>
+	<nav>
+		<ul>
+			<li><a href="#aboutme">ABOUT ME</a></li>
+			<li><a href="#work">WORK</a></li>
+			<li><a href="#contactme">CONTACT ME</a></li>
+		</ul>
+	</nav>
+	<div role="content">
+		<div id="outercontent">
+		</div>
+	</div>
+	<footer>
+		<div>
+			<a href="https://www.instagram.com/sohwakhaeng_/" target="_blank">
+				<img src="images/insta.png" width="30" height="30">
+			</a>
+		</div>
+		<p>Copyright</p>
+	</footer>
+</body>
+</html>

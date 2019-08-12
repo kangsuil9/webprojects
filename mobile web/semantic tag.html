@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width; initial-scale=1.0">
+	<title>HTML5 page basic layout</title>
+	<style>
+		* {margin: 0px; padding: 5px 0px}
+
+		body { font-size: 14px; width: auto; height: auto; margin: 0 auto }
+		section { width: 80%; float: left; background: #E4F2D0 }
+		aside { width: 20%; float: right; background: #F1DCF2 }
+		#article1 { font-size: 12px; background: silver; margin: 0px 10px }
+		header { background: #085C3C; color: white }
+		footer { background: #085C3C; color: white; clear: both }
+		nav { background: olivedrab }
+		h1 {font-size: 11px}
+		h2 {font-size: 9px}
+
+		@media only screen and (max-width: 320px) and (orientation: portrait) {
+			section { width: 240px; float: left; background: #F1DCF2 }
+			aside { width: 75px; float: right; background: #E4F2D0 }
+		}
+
+		@media only screen and (min-width: 321px) and (orientation: landscape) {
+			section { width: 80%; float: left; background: lavender }
+			aside { width: 20%; text-align: center; float: right; background: darkviolet; color: white }
+		}
+	</style>
+</head>
+<body>
+	<header><h1>Header !!!</h1></header>
+	<nav><h1>Nav~~~~~~~~~~~~~~</h1></nav>
+	<section id="section1">
+		<h1>Section1~~~</h1>
+		<p>This is a box of a Section1</p>
+	</section>
+	<aside><h1>Aside~~~</h1>
+		<p>This is a box of an aside</p>
+	</aside>
+	<section id="section2">
+		<h1>Section2</h1>
+		<p>This is Section 2!~~~~~~</p>
+		<article id="article1">
+			<h2>This is a box of Article1 with H2 Tab</h2>
+			<p>This is a BOX!!! of Article1 with P Tag</p>
+		</article>
+	</section>
+	<footer><h1>Footer ~~~</h1></footer>
+</body>
+</html>

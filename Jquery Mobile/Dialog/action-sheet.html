@@ -1,0 +1,45 @@
+ <!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+	<div data-role="page" id="page1">
+		<dir data-role="header">
+			<h1>Header</h1>
+		</dir>
+		<div data-role="content">
+			<p>Content</p>
+			<a href="#dialog1" data-transition="slidedown">ActionSheet 1</a>
+			<a href="#dialog2" data-transition="slidedown">ActionSheet 2</a>
+		</div>
+		<div data-role="footer" data-position="fixed">
+			<h4>Footer</h4>
+		</div>
+	</div>
+
+	<div data-role="dialog" id="dialog1">
+		<div data-role="content">
+			<p>Action Sheet 1</p>
+			<a href="#" data-role="button">Choice1</a>
+			<a href="#" data-role="button">Choice2</a>
+			<a href="#" data-role="button">Choice3</a>
+			<a href="#" data-role="button">Choice4</a>
+			<a href="#" data-role="button" data-rel="back">Calcel</a>
+		</div>
+	</div>
+
+	<div data-role="dialog" id="dialog2">
+		<div data-role="content">
+			<p>Action Sheet 2</p>
+			<p>Do you want to delete?</p>
+			<a href="#" data-role="button" data-rel="back">Yes</a>
+			<a href="#dialog1" data-role="button" data-rel="back">No</a>
+		</div>
+	</div>
+</body>
+</html>

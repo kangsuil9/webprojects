@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+	<div data-role="page" id="home">
+		<div data-role="header">
+			<h1>Smart Page Link Handling</h1>
+		</div>
+		<div data-role="content">
+			<h2>External Program Link</h2>
+			<ul data-role="listview" data-inset="true">
+				<li><a href="mailto:kangsuil9@gmail.com">Email Link : kangsuil9@gmail.com</a></li>
+				<li><a href="tel:5872248800" target="_blank">Tele phone Link</a></li>
+				<li><a href="sms:5872248800" target="_blank">SMS Message Link</a></li>
+				<li><a href="http://maps.google.com/maps?q=37.511611,127.098293&hl=ko" target="_blank">Satellite Axis Link</a></li>
+				<li><a href="http://maps.google.com/maps?q=대한민국+서울특별시+강남구+삼성1동+159-1&hl=ko" target="_blank">Address Link</a></li>
+			</ul>
+		</div>
+		<div data-role="footer" class="ui-bar" data-position="fixed">
+			<a href="index.html" data-icon="grid" rel="external">Index</a>
+		</div>
+	</div>
+</body>
+</html>

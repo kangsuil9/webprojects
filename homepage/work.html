@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width initial-scale=1">
+	<title>HTML5 My Portpolio Homepage</title>
+	<link rel="stylesheet" type="text/css" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+	
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<style>
+		@font-face {
+			font-family: bmjua;
+			src: url(BMJUA_otf.otf);
+		}
+		body {font-family: bmjua;}
+		header {background-color: #C9D787; color: white; padding: 30px; text-align: center; font-size: 30px}
+		nav {list-style-type: none; text-align: center; overflow: hidden;}
+		ul {padding: 0px; }
+		li {display: inline;}
+		a {text-decoration: none; padding-right: 10px; padding-left: 10px; color: #7D8A2E}
+		footer {padding: 10px; text-align: center; color: gray}
+		#listarea {text-align-last: center;}
+		.innerarea {padding: 10px}
+		.contentimage {padding: 20px; max-width: 80%; max-height: 80%; border-style: solid; border-color: #C9D787; border-width: 1px}
+		.contentimage:hover {filter: blur(4px)}
+
+
+	</style>
+	<script type="text/javascript">
+		var dir = "images/";
+		var fileextension = ".png";
+		var result = "";
+
+		$.ajax({
+		    url : dir,
+		    success: function (data) {
+		        $(data).find("a").attr("href", function (i, val) {
+		            if( val.match(/\.(jpe?g|png|gif)$/) ) { 
+		            	result += "<div class='innerarea'><img class='contentimage' src='"+ dir + val +"'></div>"
+		            }
+		        });
+		        $('#listarea').empty();
+		        $('#listarea').append(result);
+		    }
+		});
+	</script>
+</head>
+<body>
+	<header>
+		<h1>Lilly Portfolio</h1>
+	</header>
+	<nav>
+		<ul>
+			<li><a href="index.html">ABOUT ME</a></li>
+			<li><a href="#">WORK</a></li>
+			<li><a href="contactme.html">CONTACT ME</a></li>
+		</ul>
+	</nav>
+	<div role="content">
+		<div role="listview" id="listarea">
+			
+		</div>
+	</div>
+	<footer>
+		<div>
+			<a href="https://www.instagram.com/sohwakhaeng_/" target="_blank">
+				<img src="images/insta.png" width="30" height="30">
+			</a>
+		</div>
+		<p>Copyright</p>
+	</footer>
+</body>
+</html>

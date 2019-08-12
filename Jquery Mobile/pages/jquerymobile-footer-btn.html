@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>J Query Mobile</title>
+	<link rel="stylesheet" type="text/css" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+	<div data-role="page" id="page1">
+		<div data-role="header">
+			<a href="#page2" class="ui-btn-right">Page2</a>
+			<h1>Page Title~~~</h1>
+		</div>
+		<div data-role="content">
+			<p>content section</p>
+			<h1>First Page</h1>
+		</div>
+		<div data-role="footer" class="ui-bar">
+			<a href="#page1">Page1</a>
+			<a href="#page2">Page2</a>
+		</div>
+	</div>
+
+	<div data-role="page" id="page2">
+		<div data-role="header" data-add-back-btn="true">
+			<h1>Page Title~~~</h1>
+		</div>
+		<div data-role="content">
+			<p>content section</p>
+			<h1>Second Page</h1>
+		</div>
+		<div data-role="footer" class="ui-bar">
+			<a href="#page1">Page1</a>
+			<a href="#page2">Page2</a>
+			<h4>dd</h4>
+		</div>
+	</div>
+</body>
+</html>

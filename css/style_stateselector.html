@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="uts-8">
+	<title>CSS Style State Selector in HTML</title>
+	<style>
+		div {margin: 15px}
+		a {margin: 0; padding: 3px; border: 2px solid purple; text-decoration: none; background: purple; color: white}
+		span > a:hover {background: white; color: purple}
+		span > a:active {background: #ff00ff; color: white}
+		div > a:link {background: white; color: purple}
+		div > a:visited {background: white; color: green}
+	</style>
+</head>
+<body>
+	<span><a href="4-2.html">Button1</a></span>
+	<span><a href="4-2.html">Button2</a></span>
+	<span><a href="#">Button3</a></span>
+	<span><a href="#">Button4</a></span>
+	<div>
+		<a href="#">Button5</a>
+		<a>Button6</a>
+		<a href="4-3.html">Button7</a>
+		<a>Button8</a>
+	</div>
+</body>
+</html>

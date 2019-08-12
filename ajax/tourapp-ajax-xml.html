@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width initial-scale=1">
+	<title>TourApp</title>
+	<link rel="stylesheet" type="text/css" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	<script>
+		var count=0;
+		var Doc;
+		$(document).ready(function() {
+			$.ajax({
+				url: 'tour1.xml',
+				type: 'get',
+				dataType: 'xml',
+				success: function(xmlDoc) {
+					Doc=xmlDoc;
+					count = $(xmlDoc).find('attraction').size();
+					displayTour();
+				},
+				error: function() {
+					$('body').html('<div>Error!!</div>');
+				}
+			});
+		});
+
+		function displayTour() {
+			var i, tagList='', country='', name='', location='';
+			tagList = '<li data-role="list-divider">list of Tour</li>';
+			if(count > 0) {
+				for( i = 0; i < count; i +=1) {
+					$record = $(Doc).find('attraction').eq(i);
+					tagList += '<li><a href="#"><img src="' + $record.find('picture').text() + '">';
+					tagList += '<p class="ui-li-aside">' + $record.attr('country') + '</p>';
+					tagList += '<h2>' + $record.find('name').text() + '</h2>';
+					tagList += '<p>Location : ' + $record.find('location').text() + '</p></a></li>';
+				}
+			}
+			$('#attractionListArea').html(tagList);
+			$('#attractionListArea').listview('refresh');
+		}
+	</script>
+</head>
+<body>
+	<div data-role="page">
+		<div data-role="header">
+			<h1>Tour App</h1>
+		</div>
+		<div data-role="content">
+			<ul data-role="listview" id="attractionListArea" data-divider-theme="b"></ul>
+		</div>
+		<div data-role="footer" data-position="fixed">
+			<h4>World Tour</h4>
+		</div>
+	</div>
+</body>
+</html>

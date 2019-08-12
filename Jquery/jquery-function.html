@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Jquery Function</title>
+
+	<script src="http://code.Jquery.com/Jquery-1.11.1.min.js"></script>
+
+	<script>
+		//jQuery(document).ready(function() {
+		//$(document).ready(function() {
+		$(function() {
+			console.log("#1# 문서준비 이벤트 핸들러가 동작함");
+			jQuery('div').click( function( ) {
+				console.log("#2# div 노드 개수 : " + $('div').length);
+				console.log("#2# h1 노드 개수 : " + $('h1').length);
+				console.log("#2# h1 텍스트 노드 개수 : " + $('div').text());
+				console.log("#2# h1 속성 노드 개수 : " + $('*[id]').length);
+				jQuery(this).remove();
+				jQuery('#id2').text('jQuery 실행 결과입니다.');
+				console.log("#6# div 노드 개수:" + $('div').length);
+				console.log("#7# h1 노드 개수:" + $('h1').length);
+				console.log("#8# h1 텍스트 노드 개수:" + $('h1').text());
+				console.log("#9# h1 속성 노드 개수:" + $('*[h1]').length);
+			});
+		});
+	</script>
+
+	<style>
+		div {width: 300px; height: 50px; color:purple; background-color: silver;}
+	</style>
+</head>
+<body>
+	<div><h1 id="id1">jQuery 클릭하세요</h1></div>
+	<h1 id="id2"></h1>
+</body>
+</html>

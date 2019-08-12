@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Media Query</title>
+
+	<style>
+		@media only screen and (max-width: 320px) {
+			* {background: limegreen; color: white}
+		}
+		@media only screen and (min-width: 321px) and (orientation: portrait) {
+			* {background: lightyellow; color: black}
+		}
+		@media only screen and (min-width: 321px) and (orientation: landscape) {
+			* {background: purple; color: white}
+		}
+		h1 { font-size: 48px }
+		h2 { font-size: 24px }
+	</style>
+</head>
+<body>
+	<h1>Media Query</h1>
+	<h2>The example of Responsive Web</h2>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Jquery Mobile</title>
+	<link rel="stylesheet" type="text/css" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+	<div data-role="page" id="page1" data-title="Page 1">
+		<div data-role="header">
+			<h1>Page 1</h1>
+		</div>
+		<div data-role="content">
+			<a href="#page2">Page 2</a>
+		</div>
+		<div data-role="footer">
+			<h4>Internal Link</h4>
+		</div>
+	</div>
+
+	<div data-role="page" id="page2">
+		<div data-role="header">
+			<h1>Page 2ddd</h1>
+		</div>
+		<div data-role="content">
+			<p>Page Transition Animation Effect</p>
+			<a href="#page1" data-direction="reserse">Page 1</a><br>
+			<a href="#page3">Page 3 Basic Transition Effect!</a><br>
+			<a href="#page3" data-transition="slide">Page3 Slide</a><br>
+			<a href="#page3" data-transition="slideup">Page3 Slide Up</a><br>
+			<a href="#page3" data-transition="slidedown">Page3 Slide Downm</a><br>
+			<a href="#page3" data-transition="flip">Page3 Flip</a><br>
+			<a href="#page3" data-transition="fade">Page3 Fade</a><br>
+			<a href="#page3" data-transition="pop">Page3 Pop</a><br>
+			<a href="#page3" data-transition="none">Page3 None</a><br>
+		</div>
+		<div data-role="footer">
+			<h4>Internal Link</h4>
+		</div>
+	</div>
+
+	<div data-role="page" id="page3" data-title="Page 3">
+		<div data-role="header">
+			<h1></h1>
+		</div>
+		<div data-role="content">
+			<a href="#page1">Page 1</a>
+			<a href="#somepage" data-rel="back">Page 2</a>
+		</div>
+		<div data-role="footer">
+			<h4>Internal Link</h4>
+		</div>
+	</div>
+</body>
+</html>

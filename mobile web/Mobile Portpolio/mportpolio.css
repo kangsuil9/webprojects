@@ -1,0 +1,44 @@
+* {margin: 0px; padding: 0px}
+header, body, footer {font-size: 14px; font-family: 나눔고딕,굴림,돋음,'Times New Roman',serif; width: 100%}
+header,footer {text-align: center}
+body {margin: auto}
+footer {position: fixed; bottom: 0px}
+
+h1 {padding: 15px; font-size: 30px; color: white}
+h2 {font-size: 15px; color: white}
+h3 {margin: 10px; font-size: 15px; color: green; text-shadow: 4px 4px 7px green}
+h1, h2 {background-image: url(image1.jpg); background-repeat: repeat-x;}
+
+img {border: 0; padding: 2px}
+
+nav {margin: 5px 5px}
+nav > span > a {font-style: bold; margin: 0; padding: 3px; border: 2px solid purple; float: right;text-decoration: none; background: purple; color: white}
+nav > span > a:hover {background: #FF00FF; color: white}
+
+@media only screen and (min-width: 321px) and (orientation: landscape) {
+	section {width: 80%; float: left}
+	aside {width: 20%; text-align: center; float: right}
+	footer {clear: both}
+}
+.content {clear: both}
+.section1 ul li {list-style-position: inside; list-style-image: url(image2.png)}
+
+/* mintro.html */
+#stu-pic {width: 6em; height: 8em; float: left}
+
+/* minfo.html */
+#year-table {table-layout: auto; width: 80%; border-collapse: separate;}
+#year-table thead {background: #E4F2D0}
+#logo {position: fixed; top: 130px; left: 70px; opacity: 0.3}
+
+/* mstudy.html */
+video {margin: 5px; width: 300px; height: 200px}
+
+/* mcareer.html */
+.semi-pic {width: 4em; height: 3em}
+#pic-container {overflow: hidden}
+#pic-container:hover {height: 220px}
+
+#pic1:hover {-webkit- transform: translate(150px,150px) scale(7,7); transform: scale(0.5)}
+#pic2:hover {-webkit- transform: translate(100px,50px) scale(7,7); transform: scale(0.5)}
+#pic3:hover {-webkit- transform: translate(39px,50px) scale(7,7); transform: scale(0.5)}

@@ -1,0 +1,40 @@
+ <!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+	<div data-role="page" id="page1">
+		<dir data-role="header">
+			<h1>Header</h1>
+		</dir>
+		<div data-role="content">
+			<fieldset data-role="controlgroup">
+				<legend>Grade</legend>
+				<label for="syear1">First Grade</label>
+				<input type="radio" name="syear" id="syear1" value="1">
+				<label for="syear2">Second Grade</label>
+				<input type="radio" name="syear" id="syear2" value="2">
+				<label for="syear3">Third Grade</label>
+				<input type="radio" name="syear" id="syear3" value="3" checked>
+				<label for="syear4">Fourth Grade</label>
+				<input type="radio" name="syear" id="syear4" value="4">
+			</fieldset>
+			<fieldset data-role="controlgroup" data-type="horizontal">
+				<legend>Semester</legend>
+				<label for="semester1">Spring</label>
+				<input type="radio" name="semester" id="semester1" value="1" checked>
+				<label for="semester2">Fall</label>
+				<input type="radio" name="semester" id="semester2" value="2">
+			</fieldset>
+		</div>
+		<div data-role="footer" data-position="fixed">
+			<h4>Footer</h4>
+		</div>
+	</div>
+</body>
+</html>

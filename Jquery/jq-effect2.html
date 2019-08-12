@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Jquery Effect</title>
+	<style>
+		div {margin: 5px; padding: 5px; border: solid thin gray}
+		#img2 {display: none}
+	</style>
+	<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			$('#fadeOut').click(function() {
+				$('#img1').fadeOut(2000, function() {
+					$('#img2').fadeIn(100);
+				});
+			});
+
+			$('#fadeIn').click(function() {
+				$('#img2').fadeOut(2000, function() {
+					$('#img1').fadeIn(100);
+				});
+			});
+
+			$('#fadeToggle').click(function() {
+				$('#img1').fadeToggle(1000);
+			});
+		});
+	</script>
+</head>
+<body>
+	fadeOut/fadeIn/fadeToggle Effect
+	<button id="fadeOut">fadeOut</button>
+	<button id="fadeIn">fadeIn</button>
+	<button id="fadeToggle">fadeToggle</button>
+	<div>
+		<img src="nook.jpg" width="100" id="img1">
+		<img src="nook.jpg" width="100" id="img2">
+	</div>
+</body>
+</html>

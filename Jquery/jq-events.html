@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>JQuery Event</title>
+	<style>
+		body * {margin: 5px; padding: 5px; border: solid thin gray}
+		div {width: 20px; height: 20px; border: solid thick green}
+		input {background-color: silver}
+	</style>
+	<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+	<script>
+		$(document).ready( function() {
+
+			$('input').focus(function() {
+				$(this).css('background-color','orange');
+			});
+			$('input').blur(function() {
+				$(this).css('background-color', 'white');
+			});
+
+			$('div').toggle(
+				function() {
+					$(this).width($(this).width() * 2);
+					$(this).height($(this).height() * 2);
+				},
+				function() {
+					$(this).width($(this).width() * 0.5);
+					$(this).height($(this).height() * 0.5);
+				}
+			);
+
+			$('img').toggle(
+				function() {
+					$(this).css('opacity', '0.5');
+				},
+				function() {
+					$(this).css('opacity','1.0');
+				}
+			);
+		});
+	</script>
+</head>
+<body>
+	focus/blur Event<br><input type="text" name="text1" value="Input!!!"><br>
+	click Event<div></div>
+	toggle Event<br><img src="nook.jpg" width="100" height="100">
+</body>
+</html>

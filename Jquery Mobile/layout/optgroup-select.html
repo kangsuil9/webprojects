@@ -1,0 +1,38 @@
+ <!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+	<div data-role="page" id="page1">
+		<dir data-role="header">
+			<h1>Header</h1>
+		</dir>
+		<div data-role="content">
+			<div data-role="fieldcontain">
+				<label for="age1">Age Spread</label>
+				<select name="age1" id="age1" data-inline="true">
+					<option value="">Select!!</option>
+					<optgroup label="Group A">
+						<option value="num1">0~9</option>
+						<option value="num2">10~19</option>
+						<option value="num3">20~29</option>
+					</optgroup>
+					<optgroup label="Group B">
+						<option value="num4">30~39</option>
+						<option value="num5">40~49</option>
+						<option value="num6" disabled>Over 50</option>
+					</optgroup>
+				</select>
+			</div>
+		</div>
+		<div data-role="footer" data-position="fixed">
+			<h4>Footer</h4>
+		</div>
+	</div>
+</body>
+</html>
