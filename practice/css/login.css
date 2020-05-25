@@ -1,0 +1,44 @@
+@charset "utf-8";
+
+.main-body{
+    margin: auto;
+    padding: 0px;
+    width: 600px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.header-homebutton{
+    height: 50px;
+    width: 150px;
+    margin-right: 30px;
+}
+
+.header-homebutton img{
+    width: 100%;
+    height: 100%;
+}
+
+main{
+    margin: 20px 50px;
+}
+
+main input{
+    margin-bottom: 30px;
+    height: 50px;
+    width: 480px;
+    font-size: 17px;
+    padding-left: 10px;
+}
+
+main button{
+    width: 480px;
+    height: 50px;
+    margin: 10px;
+    font-size: 17px;
+}

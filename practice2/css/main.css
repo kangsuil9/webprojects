@@ -1,0 +1,61 @@
+@charset "utf-8";
+
+body{
+    width: 1000px;
+}
+
+header{
+    background: red;
+}
+
+.logo{
+    height: 100px;
+    width: 100px;
+    float: left;
+    background: green;
+}
+
+.coverdiv{
+    float: left;
+    background: red;
+}
+
+.menu{
+    float: right;
+    height: 50px;
+    width: 400px;
+    background: yellow;
+}
+
+.nav{
+    clear: both;
+    height: 50px;
+    width: 900px;
+    background: grey;
+}
+
+.menu ul li{
+    display: inline-block;
+    margin: 10px;
+}
+
+.nav ul li{
+    display: inline-block;
+    margin: 10px
+}
+
+header::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+section{
+    height: 200px;
+    background: pink;
+}
+
+footer{
+    background: lightblue;
+    height: 100px;
+}
