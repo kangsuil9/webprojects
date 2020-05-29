@@ -1,0 +1,14 @@
+doctype html
+html
+    head(charset="utf-8")
+    body
+        h1 
+            a(href="/topic") JavaScript Web Page
+        ul
+            each topic in topics
+                li
+                    a(href="/topic/"+topic)=topic
+        h2=title
+        =description
+        h1
+            a(href="/topic/new") Create

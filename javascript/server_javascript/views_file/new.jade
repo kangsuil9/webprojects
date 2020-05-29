@@ -1,0 +1,17 @@
+doctype html
+html
+    head(charset="utf-8")
+    body
+        h1 
+            a(href='#') JavaScript Web Page
+        ul
+            each topic in topics
+                li
+                    a(href="/topic/"+topic)=topic
+        form(action="/topic" method="POST")
+            p
+                input(type="text" name="title" placeholder="title")
+            p
+                textarea(name="description" placeholder="descriptioin")
+            p
+                input(type="submit")
